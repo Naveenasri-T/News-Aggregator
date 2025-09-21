@@ -1,0 +1,155 @@
+<!DOCTYPE html><!DOCTYPE html>
+
+<html lang="en"><html lang="en">
+
+<head><head>
+
+    <meta charset="UTF-8">    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>📰 News Aggregator</title>    <title>📰 News Aggregator</title>
+
+    <link rel="stylesheet" href="/static/styles.css">    <link rel="stylesheet" href="/static/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head></head>
+
+<body><body>
+
+    <div class="app">    <div class="app">
+
+        <div class="container">        <div class="container">
+
+            <!-- Header -->            <!-- Header -->
+
+            <header class="header">            <header class="header">
+
+                <h1>📰 News Aggregator</h1>                <h1>📰 News Aggregator</h1>
+
+                <p class="subtitle">Stay updated with the latest news from around the world</p>                <p>Search, discover, and stay updated with the latest news from around the world</p>
+
+            </header>            </header>
+
+
+
+            <!-- Main Content -->            <!-- Main Content -->
+
+            <main class="main">            <main class="main-content">
+
+                <!-- Left Column -->                <!-- Left Column -->
+
+                <div class="left-column">                <div class="left-column">
+
+                    <!-- Search Section -->                    <!-- Search Section -->
+
+                    <section class="search-section">                    <div class="search-container">
+
+                        <h2>🔍 Search News</h2>                        <h2>🔍 Search News</h2>
+
+                        <form id="searchForm" class="search-form">                        <form id="searchForm" class="search-form">
+
+                            <div class="input-group">                            <div class="input-group">
+
+                                <input                                 <input 
+
+                                    type="text"                                     type="text" 
+
+                                    id="searchInput"                                     id="searchInput" 
+
+                                    placeholder="Enter a topic or keyword..."                                     placeholder="Enter topic (e.g., technology, python, AI...)"
+
+                                    required                                    class="search-input"
+
+                                    class="search-input"                                    required
+
+                                >                                />
+
+                                <button type="submit" class="search-button">                                <button type="submit" class="search-button" id="searchBtn">
+
+                                    Search                                    🔍 Search
+
+                                </button>                                </button>
+
+                            </div>                            </div>
+
+                        </form>                        </form>
+
+                    </section>                        <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+                    </div>
+
+                    <!-- Results Section -->
+
+                    <section id="results" class="results-section" style="display: none;">                    <!-- Results Section -->
+
+                        <h2>📄 Search Results</h2>                    <div class="news-results" id="newsResults">
+
+                        <div id="searchResults" class="articles-container">                        <div class="no-results">
+
+                            <!-- Results will be populated here -->                            📰 Enter a topic above to search for news articles
+
+                        </div>                        </div>
+
+                    </section>                    </div>
+
+                </div>                </div>
+
+
+
+                <!-- Right Column -->                <!-- Right Column -->
+
+                <div class="right-column">                <div class="right-column">
+
+                    <!-- Trending Section -->                    <!-- Trending Section -->
+
+                    <section class="trending-section">                    <div class="trending-news" id="trendingNews">
+
+                        <h2>🔥 Trending Topics</h2>                        <div class="trending-header">
+
+                        <div id="trendingResults" class="trending-container">                            <h3>🔥 Trending News</h3>
+
+                            <p class="loading">Loading trending topics...</p>                            <button class="refresh-button" id="refreshTrending">🔄 Refresh</button>
+
+                        </div>                        </div>
+
+                    </section>                        <div id="trendingContent">
+
+                            <div class="loading">🔄 Loading trending articles...</div>
+
+                    <!-- Search History Section -->                        </div>
+
+                    <section class="history-section">                    </div>
+
+                        <h2>📚 Recent Searches</h2>
+
+                        <div id="searchHistory" class="history-container">                    <!-- Search History Section -->
+
+                            <p class="no-history">No recent searches</p>                    <div class="search-history" id="searchHistory">
+
+                        </div>                        <div class="history-header">
+
+                    </section>                            <h3>📚 Search History (Last 10)</h3>
+
+                </div>                            <button class="refresh-button" id="refreshHistory">🔄 Refresh</button>
+
+            </main>                        </div>
+
+        </div>                        <div id="historyContent">
+
+    </div>                            <div class="loading">🔄 Loading history...</div>
+
+                        </div>
+
+    <script src="/static/script.js"></script>                    </div>
+
+</body>                </div>
+
+</html>            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
